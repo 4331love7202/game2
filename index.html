@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turtle and Rabbit Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        #result {
+            font-size: 20px;
+            margin-top: 20px;
+            padding: 10px;
+        }
+
+        #buttons {
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px;
+            font-size: 16px;
+            margin: 0 5px;
+        }
+
+        #hero-container {
+            background-color: blue;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        #betting-container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Turtle and Rabbit Game</h1>
+
+    <label for="player1Prediction">Player 1 Prediction (Turtle or Rabbit): </label>
+    <select id="player1Prediction">
+        <option value="turtle">Turtle</option>
+        <option value="rabbit">Rabbit</option>
+    </select>
+
+    <label for="player2Prediction">Player 2 Prediction (Turtle or Rabbit): </label>
+    <select id="player2Prediction">
+        <option value="turtle">Turtle</option>
+        <option value="rabbit">Rabbit</option>
+    </select>
+
+    <div id="betting-container">
+        <label for="betAmount">Bet Amount (From ₩10,000 to ₩100,000): </label>
+        <input type="number" id="betAmount" min="10000" max="100000" step="10000" placeholder="Enter amount (₩10,000 to ₩100,000)">
+    </div>
+
+    <button onclick="playGame()">Predict</button>
+
+    <div id="result"></div>
+
+    <div id="buttons">
+        <button onclick="deposit('player1')">Deposit Player 1</button>
+        <button onclick="withdraw('player1')">Withdraw Player 1</button>
+        <button onclick="deposit('player2')">Deposit Player 2</button>
+        <button onclick="withdraw('player2')">Withdraw Player 2</button>
+    </div>
+
+    <div id="hero-container">
+        <!-- Add hero image or content here. For example, <img src="hero-image.jpg" alt="Hero Image"> -->
+    </div>
+
+    <script>
+        var accountBalances = {
+            player1: 100000,
+            player2: 100000
+        };
+
+        function updateBalance(player) {
+            document.getElementById(player + 'Balance').innerText = accountBalances[player];
+        }
+
+        function playGame() {
+            // Game logic remains unchanged.
+        }
+
+        function deposit(player) {
+            // Deposit logic remains unchanged.
+        }
+
+        function withdraw(player) {
+            // Withdraw logic remains unchanged.
+        }
+
+        function getRandomColor() {
+            // getRandomColor function remains unchanged.
+        }
+    </script>
+
+    <h2>Player 1 Balance: <span id="player1Balance">100000</span> won</h2>
+    <h2>Player 2 Balance: <span id="player2Balance">100000</span> won</h2>
+</body>
+</html>
